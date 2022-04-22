@@ -1,6 +1,6 @@
 import 'package:daily_coders/constants.dart';
+import 'package:daily_coders/layers/item/list_item.dart';
 import 'package:flutter/material.dart';
-import '../../item/ListItem.dart';
 
 class ListItemWidget extends StatelessWidget {
   final ListItem item;
@@ -12,7 +12,9 @@ class ListItemWidget extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(6),
       decoration: BoxDecoration(
-          color: listColor, borderRadius: BorderRadius.circular(14.0)),
+        color: listColor,
+        borderRadius: BorderRadius.circular(14.0),
+      ),
       child: ListTile(
         contentPadding: const EdgeInsets.all(12.0),
         leading: CircleAvatar(

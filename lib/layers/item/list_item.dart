@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 class ListItem {
   final String name;
   final String urlImage;
