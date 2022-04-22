@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import '../../common_widgets/custom_card.dart';
+import '../../../item/ListItem.dart';
+import '../../../data/list_items.dart';
+import '../../widgets/list_item_widgets.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -8,37 +12,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
+  final List<ListItem> items = List.from(listItems);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Daily Coders"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
+      body: AnimatedList(
+        initialItemCount: items.length,
+        itemBuilder: (context, index, animation) =>
+            ListItemWidget(item: items[index]),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        onPressed: () {},
         child: const Icon(Icons.add),
       ),
     );
