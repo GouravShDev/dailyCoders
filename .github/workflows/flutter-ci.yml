@@ -20,6 +20,10 @@ jobs:
     steps:
       # Setup Java environment in order to build the Android app.
       - uses: actions/checkout@v1
+      - name: Provide Firebase Android
+        env:
+          FIREBASE_CONFIG_DEV: ${{ secrets.FIREBASE_CONFIG_DEV }}
+        run: echo $FIREBASE_CONFIG_DEV > ./android/app/google-services.json
       - uses: actions/setup-java@v1
         with:
           java-version: "12.x"
