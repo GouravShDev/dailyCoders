@@ -20,16 +20,17 @@ final appTheme = ThemeData(
   primaryColor: appSwatch.shade500,
   scaffoldBackgroundColor: scaffoldColor,
   fontFamily: 'RobotoSlab',
-  primaryTextTheme: const TextTheme(
-    headline6: TextStyle(color: Colors.black),
-  ),
   appBarTheme: AppBarTheme(
     color: appBarColor,
     centerTitle: true,
+    // appbar text color
+    foregroundColor: appSwatch.shade300,
     iconTheme: const IconThemeData().copyWith(color: Colors.black),
   ),
 );
 
+// create material color from a color to use in app theme
+// https://stackoverflow.com/questions/50549539/how-to-add-custom-color-to-flutter
 MaterialColor createMaterialColor(Color color) {
   final List<double> strengths = <double>[.05];
   final Map<int, Color> swatch = <int, Color>{};
