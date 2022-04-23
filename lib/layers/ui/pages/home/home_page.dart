@@ -1,8 +1,7 @@
+import 'package:daily_coders/layers/data/list_items.dart';
+import 'package:daily_coders/layers/item/list_item.dart';
+import 'package:daily_coders/layers/ui/pages/home/widgets/list_item_widgets.dart';
 import 'package:flutter/material.dart';
-import '../../common_widgets/custom_card.dart';
-import '../../../item/ListItem.dart';
-import '../../../data/list_items.dart';
-import '../../widgets/list_item_widgets.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);

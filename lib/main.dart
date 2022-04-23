@@ -1,6 +1,6 @@
+import 'package:daily_coders/constants.dart';
 import 'package:daily_coders/layers/ui/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
-import 'constants.dart';
 
 void main() {
   runApp(const MyApp());
