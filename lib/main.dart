@@ -1,3 +1,4 @@
+import 'package:daily_coders/constants.dart';
 import 'package:daily_coders/layers/ui/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Daily Coders',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        brightness: Brightness.dark,
-      ),
+      theme: appTheme,
       home: const MyHomePage(),
     );
   }
