@@ -1,4 +1,5 @@
-import 'package:daily_coders/constants.dart';
+import 'package:daily_coders/core/theme/app_theme.dart';
+import 'package:daily_coders/core/utils/strings.dart';
 import 'package:daily_coders/layers/ui/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Daily Coders',
+      title: Strings.appName,
       theme: appTheme,
       home: const MyHomePage(),
     );
