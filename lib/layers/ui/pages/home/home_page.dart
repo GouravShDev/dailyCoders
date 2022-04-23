@@ -1,3 +1,4 @@
+import 'package:daily_coders/core/utils/strings.dart';
 import 'package:daily_coders/layers/data/list_items.dart';
 import 'package:daily_coders/layers/item/list_item.dart';
 import 'package:daily_coders/layers/ui/pages/home/widgets/list_item_widgets.dart';
@@ -16,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Daily Coders"),
+        title: const Text(Strings.appName),
       ),
       body: AnimatedList(
         initialItemCount: items.length,
