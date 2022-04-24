@@ -1,20 +1,22 @@
 import 'package:daily_coders/core/utils/strings.dart';
 import 'package:daily_coders/layers/data/list_items.dart';
 import 'package:daily_coders/layers/item/list_item.dart';
+import 'package:daily_coders/layers/ui/pages/home/widgets/bottom_navigation_bar.dart';
 import 'package:daily_coders/layers/ui/pages/home/widgets/list_item_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:daily_coders/layers/ui/pages/home/widgets/bottom_navigation_bar.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  // route name for navigation
+  static const String route = '/home-page';
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends State<HomePage> {
   final List<ListItem> items = List.from(listItems);
-  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {},
         child: const Icon(Icons.add),
       ),
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: const BottomNavBar(),
     );
   }
 }
