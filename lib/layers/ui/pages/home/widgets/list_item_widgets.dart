@@ -12,7 +12,7 @@ class ListItemWidget extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(6),
       decoration: BoxDecoration(
-        color: listColor,
+        color: klistColor,
         borderRadius: BorderRadius.circular(14.0),
       ),
       child: ListTile(

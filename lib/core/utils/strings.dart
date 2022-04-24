@@ -30,4 +30,9 @@ class Strings {
   // Account page
   static const String account = 'Account';
   static const String accountPage = 'Account Page';
+
+  //Bar Navigation Labels
+  static const String home = 'Home';
+  static const String dailyChallenge = 'Daily Challenge';
+  static const String profile = 'Profile';
 }

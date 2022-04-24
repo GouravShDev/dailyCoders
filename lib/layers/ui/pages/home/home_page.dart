@@ -3,6 +3,7 @@ import 'package:daily_coders/layers/data/list_items.dart';
 import 'package:daily_coders/layers/item/list_item.dart';
 import 'package:daily_coders/layers/ui/pages/home/widgets/list_item_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:daily_coders/layers/ui/pages/home/widgets/bottom_navigation_bar.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -30,21 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {},
         child: const Icon(Icons.add),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.photo_album_outlined), label: "Post"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.account_box_outlined), label: "Profile"),
-        ],
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-      ),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
