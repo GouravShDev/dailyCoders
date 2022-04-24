@@ -6,10 +6,13 @@ import 'package:flutter/material.dart';
 /*
 Constants
 */
-const Color appBarColor = Color(0xFF0A0C23);
-const Color scaffoldColor = Color(0xFF0A0C23);
-const Color listColor = Color(0xff1D1E23);
-const Color floatingButtonbackground = Color(0xff006778);
+const Color kappBarColor = Color(0xFF0A0C23);
+const Color kscaffoldColor = Color(0xFF0A0C23);
+const Color klistColor = Color(0xff1D1E23);
+const Color kfloatingButtonbackground = Color(0xff006778);
+const Color kBottomBarBgColor = Color(0xff1A132F);
+const Color kBottomBarSelectedItem = Color(0xff035397);
+const Color kBottomBarUnSelectedItem = Color(0xffDFDFDE);
 const TextStyle textStyle = TextStyle(color: Colors.white, fontSize: 28.0);
 
 final MaterialColor appSwatch =
@@ -18,10 +21,10 @@ final MaterialColor appSwatch =
 final appTheme = ThemeData(
   primarySwatch: appSwatch,
   primaryColor: appSwatch.shade500,
-  scaffoldBackgroundColor: scaffoldColor,
+  scaffoldBackgroundColor: kscaffoldColor,
   fontFamily: 'RobotoSlab',
   appBarTheme: AppBarTheme(
-    color: appBarColor,
+    color: kappBarColor,
     centerTitle: true,
     // appbar text color
     foregroundColor: appSwatch.shade300,
