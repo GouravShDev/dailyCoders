@@ -8,11 +8,14 @@ Constants
 */
 const Color kappBarColor = Color(0xFF0A0C23);
 const Color kscaffoldColor = Color(0xFF0A0C23);
+const Color kPrimaryColor = Color(0x0003D8C3);
+const Color kIconColor = Color(0xFF0A0C23);
 const Color klistColor = Color(0xff1D1E23);
 const Color kfloatingButtonbackground = Color(0xff006778);
 const Color kBottomBarBgColor = Color(0xff1A132F);
 const Color kBottomBarSelectedItem = Color(0xff035397);
 const Color kBottomBarUnSelectedItem = Color(0xffDFDFDE);
+const Color ktextFieldColor = Color(0xFFDFFFFB);
 const TextStyle textStyle = TextStyle(color: Colors.white, fontSize: 28.0);
 
 final MaterialColor appSwatch =
@@ -23,6 +26,12 @@ final appTheme = ThemeData(
   primaryColor: appSwatch.shade500,
   scaffoldBackgroundColor: kscaffoldColor,
   fontFamily: 'RobotoSlab',
+  iconTheme: const IconThemeData().copyWith(color: kIconColor),
+  // icon color when text field selected
+  // https://stackoverflow.com/a/67867637/14897114
+  colorScheme: ThemeData().colorScheme.copyWith(
+        primary: kIconColor,
+      ),
   appBarTheme: AppBarTheme(
     color: kappBarColor,
     centerTitle: true,

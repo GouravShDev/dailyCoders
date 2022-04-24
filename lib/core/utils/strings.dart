@@ -14,7 +14,7 @@ class Strings {
   static const String logoutFailed = 'Logout failed';
 
   // Sign In Page
-  static const String signIn = 'Sign in';
+  static const String logIn = 'log in';
   static const String email = 'Email';
   static const String password = 'Password';
   static const String confirmPass = 'Confirm password';
