@@ -27,20 +27,58 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  # state management library
+  bloc: ^8.0.3
+
+  # Firestore database
+  cloud_firestore: ^3.1.6
+
   cupertino_icons: ^1.0.2
+
+  # For Functional programming and immutable data structures
+  dartz: ^0.10.1
+
+  # Firebase dependencies
   firebase_auth: ^3.1.1
   firebase_core: ^1.6.0
+
   flutter:
     sdk: flutter
+
+  # widgets for using bloc
+  flutter_bloc: ^8.0.1
+
+  # package containing annotations for freezed.
+  freezed_annotation: ^1.1.0
+
+  # Service Locator for Dart and Flutter projects
+  get_it: ^7.2.0
+  injectable: ^1.5.0
+
+  # To generate to/from JSON code for a class
+  json_serializable: ^6.1.4
+
+  # For generating unique Ids
+  uuid: ^3.0.6
+
 dev_dependencies:
   analyzer: ^3.2.0
+  # code generation for Dart
   build_runner: ^2.1.7
+
   flutter_test:
     sdk: flutter
+
+  # for generating boilerplate code for classes
   freezed: ^1.1.1
-  freezed_annotation: ^1.1.0
+
+  # for dependency injection
   injectable_generator: any
-  json_serializable: ^6.1.4
+
+  # To generate to/from JSON code for a class
+  json_annotation: ^4.4.0
+
+  # define sets of rules for dart and flutter
   lint: ^1.0.0
 
 # For information on the generic Dart part of this file, see the

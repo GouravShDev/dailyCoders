@@ -1,6 +1,8 @@
 import 'package:daily_coders/core/utils/strings.dart';
+import 'package:daily_coders/injection_container.dart';
 import 'package:daily_coders/layers/data/list_items.dart';
 import 'package:daily_coders/layers/item/list_item.dart';
+import 'package:daily_coders/layers/ui/blocs/auth/auth_bloc.dart';
 import 'package:daily_coders/layers/ui/pages/home/widgets/bottom_navigation_bar.dart';
 import 'package:daily_coders/layers/ui/pages/home/widgets/list_item_widgets.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +32,10 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          // TODO : remove this line
+          getIt<AuthBloc>().add(const AuthEvent.signedOut());
+        },
         child: const Icon(Icons.add),
       ),
       bottomNavigationBar: const BottomNavBar(),
